@@ -88,7 +88,7 @@ that specifies inputs, outputs, and the exact computation required.
 | `src/io.py` | `read_data` | Load CSV, parse dates, set index |
 | `src/returns.py` | `calculate_returns` | Simple daily returns from prices |
 | `src/momentum.py` | `calculate_momentum` | Cumulative return over past *k* days |
-| `src/signals.py` | `generate_signals` | +1 / −1 from momentum sign |
+| `src/signals.py` | `generate_signals` | +1 / −1 / 0 from momentum sign |
 | `src/strategy.py` | `calculate_volatility` | Rolling annualized std dev (252 days) |
 | `src/strategy.py` | `calculate_strategy_returns` | Vol-scaled strategy returns + TSMOM |
 | `src/performance.py` | `calculate_performance` | Sharpe, drawdown, etc. |
