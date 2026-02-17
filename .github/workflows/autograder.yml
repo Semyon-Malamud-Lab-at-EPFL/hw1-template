@@ -1,8 +1,7 @@
 name: Autograder
 
 on:
-  push:
-    branches: ["*"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -31,16 +30,6 @@ jobs:
           pip install -r requirements.txt
 
       # ── 4. Fetch private grader ──────────────────────────────────
-      #    The grader lives in a separate private repo so students
-      #    cannot read the reference solutions.
-      #
-      #    SETUP REQUIRED (one-time, by the instructor / TA):
-      #      1. Create a private repo, e.g.  <org>/hw1-grader
-      #         and push grade.py into it.
-      #      2. Create a Fine-Grained Personal Access Token (PAT)
-      #         with read-only access to that repo.
-      #      3. Add the PAT as an Organization Secret named
-      #         GRADER_PAT  (Settings → Secrets → Actions).
       - name: Fetch grader
         run: |
           git clone https://x-access-token:${{ secrets.GRADER_PAT }}@github.com/${{ github.repository_owner }}/hw1-grader.git .grader
