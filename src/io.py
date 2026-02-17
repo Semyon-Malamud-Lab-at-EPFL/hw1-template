@@ -1,4 +1,4 @@
-"""Data loading utilities."""
+"""Data loading utilities"""
 
 import pandas as pd
 

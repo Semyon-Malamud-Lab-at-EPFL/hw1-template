@@ -49,7 +49,7 @@ def calculate_strategy_returns(
         strategy_return_{i,t} = signal_{i,t} * (target_vol / vol_{i,t-1}) * r_{i,t}
 
     where:
-        - signal_{i,t} is the trading signal at day t (+1 or -1)
+        - signal_{i,t} is the trading signal at day t (+1, -1, or 0)
         - vol_{i,t-1} is the ex-ante annualized volatility (lagged by
           one day to avoid look-ahead bias)
         - r_{i,t} is the daily return at day t
